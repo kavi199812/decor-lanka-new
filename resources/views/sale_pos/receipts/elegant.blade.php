@@ -497,6 +497,10 @@
 							</div>
 						@endif
 
+						@if(!empty($receipt_details->customer_alternate_number))
+							<div style="margin-bottom: 2px;"><b>Secondary Contact:</b> {{ $receipt_details->customer_alternate_number }}</div>
+						@endif
+
 						@if(!empty($receipt_details->client_id_label) && !empty($receipt_details->client_id))
 							<div><strong>{{ $receipt_details->client_id_label }}:</strong> {{ $receipt_details->client_id }}</div>
 						@endif
@@ -540,6 +544,13 @@
 							<tr>
 								<td>{{ !empty($receipt_details->date_label) ? rtrim($receipt_details->date_label, ':') : 'DATE' }}:</td>
 								<td>{{$receipt_details->invoice_date}}</td>
+							</tr>
+						@endif
+
+						@if(!empty($receipt_details->tracking_number) || !empty($receipt_details->shipping_custom_field_1_value))
+							<tr>
+								<td>TRACKING NO:</td>
+								<td style="font-weight: 700; color: #1e293b;">{{ !empty($receipt_details->tracking_number) ? $receipt_details->tracking_number : $receipt_details->shipping_custom_field_1_value }}</td>
 							</tr>
 						@endif
 
@@ -609,13 +620,10 @@
 	</table>
 
 	<!-- Shipping & Order Info if present -->
-	@if(!empty($receipt_details->shipping_custom_field_1_label) || !empty($receipt_details->shipping_custom_field_2_label) || !empty($receipt_details->sale_orders_invoice_no))
+	@if(!empty($receipt_details->shipping_custom_field_2_label) || !empty($receipt_details->sale_orders_invoice_no))
 		<div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 8px 14px; margin-bottom: 18px; font-size: 11.5px; color: #475569; width: 100%; box-sizing: border-box;">
 			<table style="width: 100%; border-collapse: collapse;">
 				<tr>
-					@if(!empty($receipt_details->shipping_custom_field_1_label))
-						<td style="padding: 2px 8px;"><strong>{!!$receipt_details->shipping_custom_field_1_label!!}:</strong> {!!$receipt_details->shipping_custom_field_1_value ?? ''!!}</td>
-					@endif
 					@if(!empty($receipt_details->shipping_custom_field_2_label))
 						<td style="padding: 2px 8px;"><strong>{!!$receipt_details->shipping_custom_field_2_label!!}:</strong> {!!$receipt_details->shipping_custom_field_2_value ?? ''!!}</td>
 					@endif

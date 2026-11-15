@@ -413,6 +413,11 @@
 						{!! $receipt_details->customer_info !!}
 						</div>
 					@endif
+					@if(!empty($receipt_details->customer_alternate_number))
+						<div class="bw">
+							<b>Secondary Contact:</b> {{ $receipt_details->customer_alternate_number }}
+						</div>
+					@endif
 	        	</p>
 	        </div>
 			

@@ -1109,6 +1109,9 @@ class TransactionUtil extends Util
                 }
             }
 
+            $output['customer_alternate_number'] = ! empty($customer->alternate_number) ? $customer->alternate_number : (! empty($customer->landline) ? $customer->landline : '');
+            $output['customer_landline'] = ! empty($customer->landline) ? $customer->landline : '';
+
             $output['customer_tax_number'] = $customer->tax_number;
             $output['customer_tax_label'] = ! empty($il->client_tax_label) ? $il->client_tax_label : '';
 
@@ -1803,6 +1806,7 @@ class TransactionUtil extends Util
             $output['shipping_custom_field_1_label'] = $shipping_custom_field_1_label;
             $output['shipping_custom_field_1_value'] = $transaction['shipping_custom_field_1'];
         }
+        $output['tracking_number'] = ! empty($transaction['shipping_custom_field_1']) ? $transaction['shipping_custom_field_1'] : '';
 
         if (! empty($custom_labels->shipping->custom_field_2)) {
             $output['shipping_custom_field_2_label'] = $custom_labels->shipping->custom_field_2;
