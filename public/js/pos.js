@@ -903,6 +903,7 @@ $(document).ready(function() {
         $('input#shipping_status').val($('#shipping_status_modal').val());
         $('input#delivered_to').val($('#delivered_to_modal').val());
         $('input#delivery_person').val($('#delivery_person_modal').val());
+        $('input#shipping_custom_field_1').val($('#shipping_custom_field_1_modal').val());
 
         //Update shipping charges
         __write_number(
@@ -913,6 +914,12 @@ $(document).ready(function() {
         //$('input#shipping_charges').val(__read_number($('input#shipping_charges_modal')));
 
         pos_total_row();
+    });
+
+    $('#posShippingModal').on('show.bs.modal', function() {
+        if ($('input#shipping_custom_field_1').length && $('input#shipping_custom_field_1').val() != '') {
+            $('#shipping_custom_field_1_modal').val($('input#shipping_custom_field_1').val());
+        }
     });
 
     $('#posShippingModal').on('shown.bs.modal', function() {
@@ -2020,6 +2027,8 @@ function reset_pos_form(){
 	$('tr.product_row').remove();
 	$('span.total_quantity, span.price_total, span#total_discount, span#order_tax, span#total_payable, span#shipping_charges_amount').text(0);
 	$('span.total_payable_span', 'span.total_paying', 'span.balance_due').text(0);
+	$('input#shipping_custom_field_1').val('');
+	$('#shipping_custom_field_1_modal').val('');
 
 	$('#modal_payment').find('.remove_payment_row').each( function(){
 		$(this).closest('.payment_row').remove();

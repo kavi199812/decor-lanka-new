@@ -1798,8 +1798,9 @@ class TransactionUtil extends Util
         $custom_labels = json_decode($business_details['custom_labels']);
 
         //shipping custom fields
-        if (! empty($custom_labels->shipping->custom_field_1)) {
-            $output['shipping_custom_field_1_label'] = $custom_labels->shipping->custom_field_1;
+        $shipping_custom_field_1_label = ! empty($custom_labels->shipping->custom_field_1) ? $custom_labels->shipping->custom_field_1 : __('sale.tracking_number');
+        if (! empty($shipping_custom_field_1_label) && ! empty($transaction['shipping_custom_field_1'])) {
+            $output['shipping_custom_field_1_label'] = $shipping_custom_field_1_label;
             $output['shipping_custom_field_1_value'] = $transaction['shipping_custom_field_1'];
         }
 

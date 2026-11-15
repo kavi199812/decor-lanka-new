@@ -1180,6 +1180,7 @@ return [
     'no_stock_history_found' => 'No stock history found',
     'add_draft' => 'Add Draft',
     'labels_for_sale_shipping_custom_fields' => 'Labels for sale shipping custom fields',
+    'tracking_number' => 'Tracking Number',
     'is_required' => 'Is required',
     'convert_to_invoice' => 'Convert to invoice',
     'converted_to_invoice_successfully' => 'Converted to invoice :invoice_no successfully',

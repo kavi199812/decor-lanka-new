@@ -56,7 +56,7 @@
 				    @php
 				        $custom_labels = json_decode(session('business.custom_labels'), true);
 
-				        $shipping_custom_label_1 = !empty($custom_labels['shipping']['custom_field_1']) ? $custom_labels['shipping']['custom_field_1'] : '';
+				        $shipping_custom_label_1 = !empty($custom_labels['shipping']['custom_field_1']) ? $custom_labels['shipping']['custom_field_1'] : __('sale.tracking_number');
 
 				        $is_shipping_custom_field_1_required = !empty($custom_labels['shipping']['is_custom_field_1_required']) && $custom_labels['shipping']['is_custom_field_1_required'] == 1 ? true : false;
 
@@ -77,21 +77,12 @@
 				        $is_shipping_custom_field_5_required = !empty($custom_labels['shipping']['is_custom_field_5_required']) && $custom_labels['shipping']['is_custom_field_5_required'] == 1 ? true : false;
 			        @endphp
 
-			        @if(!empty($shipping_custom_label_1))
-			        	@php
-			        		$label_1 = $shipping_custom_label_1 . ':';
-			        		if($is_shipping_custom_field_1_required) {
-			        			$label_1 .= '*';
-			        		}
-			        	@endphp
-
-			        	<div class="col-md-6">
-					        <div class="form-group">
-					            {!! Form::label('shipping_custom_field_1', $label_1 ) !!}
-					            {!! Form::text('shipping_custom_field_1', !empty($transaction->shipping_custom_field_1) ? $transaction->shipping_custom_field_1 : null, ['class' => 'form-control','placeholder' => $shipping_custom_label_1, 'required' => $is_shipping_custom_field_1_required]); !!}
-					        </div>
-					    </div>
-			        @endif
+					<div class="col-md-6">
+				        <div class="form-group">
+				            {!! Form::label('shipping_custom_field_1_modal', $shipping_custom_label_1 . ':' ) !!}
+				            {!! Form::text('shipping_custom_field_1_modal', !empty($transaction->shipping_custom_field_1) ? $transaction->shipping_custom_field_1 : null, ['class' => 'form-control','placeholder' => $shipping_custom_label_1]); !!}
+				        </div>
+				    </div>
 			        @if(!empty($shipping_custom_label_2))
 			        	@php
 			        		$label_2 = $shipping_custom_label_2 . ':';

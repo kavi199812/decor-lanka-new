@@ -126,7 +126,7 @@
 
       
       @if(!empty($sell->shipping_custom_field_1))
-        <br><strong>{{$custom_labels['shipping']['custom_field_1'] ?? ''}}: </strong> {{$sell->shipping_custom_field_1}}
+        <br><strong>{{!empty($custom_labels['shipping']['custom_field_1']) ? $custom_labels['shipping']['custom_field_1'] : __('sale.tracking_number')}}: </strong> {{$sell->shipping_custom_field_1}}
       @endif
       @if(!empty($sell->shipping_custom_field_2))
         <br><strong>{{$custom_labels['shipping']['custom_field_2'] ?? ''}}: </strong> {{$sell->shipping_custom_field_2}}
