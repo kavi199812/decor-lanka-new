@@ -1,0 +1,55 @@
+<?php
+
+return [
+     'exc_of_tax' => 'බදු අඩු නොකර', /* modified */
+     'inc_of_tax' => 'බදු ඇතුළත්', /* modified */
+     'profit_percent' => 'x ලාභ වට්ටම (%)',
+     'add_new_product' => 'නව නිෂ්පාදනයක් එකතු කරන්න',
+     'add_product_for_labels' => 'ලේබල් ජනන සඳහා නිෂ්පාදන එකතු කරන්න',
+     'product_type' => 'නිෂ්පාදන වර්ගය',
+     'category' => 'වර්ගය',
+     'sub_category' => 'අවලංගු වර්ගය',
+     'unit' => 'ඉකිබද',
+     'brand' => 'බ්‍රෑන්ඩ්',
+     'tax' => 'බදු',
+     'sku' => 'SKU',
+     'alert_quantity' => 'ඇලර්ට් ප්‍රමාණය', /* modified */
+     'product_name' => 'නිෂ්පාදන නාමය',
+     'auto_generate' => 'ඔටෝ ජනනය',
+     'manage_stock' => 'ගොඩනැගීම කළමනාකරණය කරන්න?',
+     'enable_stock_help' => 'නිෂ්පාදන මට්ටමේ ගොඩනැගීම කළමනාකරණය සක්‍රීය කරන්න', /* modified */
+     'barcode_type' => 'බාර්කෝඩ් වර්ගය',
+     'applicable_tax' => 'ලබා ගත හැකි බදු',
+     'selling_price_tax_type' => 'විකුණුම් මිල බදු වර්ගය',
+     'inclusive' => 'ඇතුළත්',
+     'exclusive' => 'අඩංගු නොවන',
+     'edit_product' => 'නිෂ්පාදනය සංස්කරණය කරන්න',
+     'default_purchase_price' => 'පෙරනිමි මිල ගණන් මිල',
+     'default_selling_price' => 'පෙරනිමි විකුණුම් මිල',
+     'value' => 'අගය',
+     'variation_name' => 'වෙනස්වීම් නාමය',
+     'variation_values' => 'වෙනස්වීම් අගය',
+     'use_template' => 'අකාරකය භාවිතා කරන්න',
+     'add_variation' => 'වෙනස්වීම එකතු කරන්න',
+     'product_added_success' => 'නිෂ්පාදනය සාර්ථකව එකතු කරන ලදී',
+     'product_updated_success' => 'නිෂ්පාදනය සාර්ථකව යාවත්කාලීන කරන ලදී',
+     'enable_product_expiry' => 'නිෂ්පාදන අවලංගු කිරීම සක්‍රීය කරන්න',
+     'expiry_period' => 'අවසන් කාලය',
+     'expires_in' => 'අවසන් වේ',
+     'not_applicable' => 'අදාළ නොවේ',
+     'months' => 'මස',
+     'days' => 'දින',
+     'mfg_date' => 'නිෂ්පාදන දිනය',
+     'exp_date' => 'අවසන් දිනය',
+     'view_product' => 'නිෂ්පාදනය බලන්න',
+     'add_product' => 'නිෂ්පාදනය එකතු කරන්න',
+     'variations' => 'වෙනස්වීම්',
+     'import_products' => 'නිෂ්පාදන ආනයන කිරීම',
+     'file_to_import' => 'ආනයන කිරීමට ගොනුව',
+     'file_imported_successfully' => 'ගොනුව සාර්ථකව ආනයන කරන ලදී',
+     'variation_sku_format' => 'වෙනස්වීම් SKU ආකෘතිය',
+     'variation_sku_format_help_text' => 'වෙනස්වීම් SKU ආකෘතිය - වෙනස්වීම් SKU හි පූරක තැබීමේදී, මෙම ආකෘතිය පරිච්ඡේද සඳහා SKU ජනනය කිරීමට භාවිතා කෙරේ.',
+     'sku_number' => 'SKU අංකය (උදාහරණ -> ABC-1, ABC-2)',
+     'sku_variation_number' => 'SKU වෙනස්වීම් අංකය (උදාහරණ -> ABCS, ABCM)'
+];
+

@@ -1,0 +1,60 @@
+<?php
+
+return [
+     'supplier' => 'සැපයුම්කරු',
+     'ref_no' => 'ආදේශ අංකය',
+     'business_location' => 'ව්‍යාපාරය ස්ථානය',
+     'purchases' => 'ක්‍රියාකාරකම්',
+     'add_payment' => 'ගෙවීම් එකතු කරන්න',
+     'edit_payment' => 'ගෙවීම සංස්කරණය කරන්න',
+     'view_payments' => 'ගෙවීම් බලන්න',
+     'amount_already_paid' => 'යොමු කරන ලද මුදල',
+     'payment_added_success' => 'ගෙවීම සාර්ථකව එකතු කරන ලදී',
+     'payment_updated_success' => 'ගෙවීම සාර්ථකව යාවත්කාලීන කරන ලදී',
+     'payment_deleted_success' => 'ගෙවීම සාර්ථකව මකා දැමූවේය',
+     'amount' => 'මුදල',
+     'payment_method' => 'ගෙවීම් ක්‍රමය',
+     'no_records_found' => 'වාක්‍ය නොමැත',
+     'payment_due' => 'ගෙවීම් ගත යුතු වේලාව', /* modified */
+     'purchase_total' => 'එකතුව පසුපස', /* modified */
+     'location' => 'ස්ථානය',
+     'payment_note' => 'ගෙවීම් සටහන',
+     'all_purchases' => 'සියලුම ගෙවීම්',
+     'purchase_status' => 'ගෙවීම් තත්වය',
+     'payment_status' => 'ගෙවීම් තත්වය',
+     'grand_total' => 'මුළු එකතුව',
+     'add_purchase' => 'ගෙවීම් එකතු කරන්න',
+     'purchase_date' => 'ගෙවීම් දිනය',
+     'purchase_quantity' => 'ගෙවීම් ප්‍රමාණය',
+     'unit_cost_before_tax' => 'යූනට් පිරිසිදු මිල',
+     'subtotal_before_tax' => 'ප්‍රාථමික මුදල',
+     'product_tax' => 'නිෂ්පාදන බදු',
+     'net_cost' => 'ශුද්ධ මුදල', /* modified */
+     'line_total' => 'පේළි එකතුව',
+     'unit_selling_price' => 'විකුණුම් මිල', /* modified */
+     'total_before_tax' => 'බදු පසු පිරිසිදු මුදල', /* modified */
+     'net_total_amount' => 'ශුද්ධ මුදල',
+     'discount_type' => 'වට්ටම් වර්ගය',
+     'discount_amount' => 'වට්ටම් මුදල',
+     'discount' => 'වට්ටම',
+     'edit_purchase' => 'ගෙවීම් සංස්කරණය කරන්න',
+     'purchase_tax' => 'ගෙවීම් බදු',
+     'shipping_details' => 'කෙළින් විස්තර',
+     'additional_shipping_charges' => 'අතිරේක ගෙවීම් වියදම්',
+     'additional_notes' => 'අතිරේක සටහන්',
+     'purchase_add_success' => 'ගෙවීම් සාර්ථකව එකතු කරන ලදී', /* modified */
+     'purchase_update_success' => 'ගෙවීම් සාර්ථකව යාවත්කාලීන කරන ලදී',
+     'purchase_details' => 'ගෙවීම් විස්තර',
+     'unit_cost_after_tax' => 'අවසන් මිල (බදු සමඟ)', /* modified */
+     'total_after_tax' => 'අවසන් ගෙවීම',
+     'no_payments' => 'ගෙවීම් නොමැත',
+     'allow_purchase_different_currency' => 'වෙනත් මුදලකින් ගෙවීම අනුමත කරන්න',
+     'purchase_currency' => 'ගෙවීම් මුදල',
+     'p_exchange_rate' => 'මුදල් විනිමය අනුපාතය',
+     'diff_purchase_currency_help' => 'ගෙවීම් මුදල සකස් කර ඇත <strong> :currency </strong>',
+     'list_purchase' => 'ගෙවීම් ලැයිස්තුව',
+     'attach_document' => 'ඉලක්ක ලිපිය',
+     'download_document' => 'අදාල ලිපිය බාගත කරන්න',
+     'max_file_size' => 'ගොනුවේ උපරිම ප්‍රමාණය: :sizeMB',
+];
+
