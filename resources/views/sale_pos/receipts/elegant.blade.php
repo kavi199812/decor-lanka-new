@@ -158,6 +158,27 @@
 		text-align: right;
 	}
 
+	.inv-track-link {
+		display: inline-block;
+		background-color: #2563eb !important;
+		color: #ffffff !important;
+		text-decoration: none !important;
+		padding: 4px 12px;
+		border-radius: 5px;
+		font-size: 11px;
+		font-weight: 600;
+		letter-spacing: 0.2px;
+		line-height: 1.4;
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	.inv-track-link:hover {
+		background-color: #1d4ed8 !important;
+		color: #ffffff !important;
+		text-decoration: none !important;
+	}
+
 	/* Items Table */
 	.inv-table-container {
 		width: 100%;
@@ -372,6 +393,16 @@
 			background: #0f172a !important;
 			-webkit-print-color-adjust: exact !important;
 		}
+		.elegant-invoice-container a[href]:after {
+			content: none !important;
+		}
+		.inv-track-link {
+			background-color: #2563eb !important;
+			color: #ffffff !important;
+			text-decoration: none !important;
+			-webkit-print-color-adjust: exact !important;
+			print-color-adjust: exact !important;
+		}
 	}
 </style>
 
@@ -548,9 +579,22 @@
 						@endif
 
 						@if(!empty($receipt_details->tracking_number) || !empty($receipt_details->shipping_custom_field_1_value))
+							@php
+								$raw_tracking_no = !empty($receipt_details->tracking_number) ? $receipt_details->tracking_number : $receipt_details->shipping_custom_field_1_value;
+								$clean_tracking_no = ltrim(trim($raw_tracking_no), '#');
+								$tracking_url = 'https://domex.lk/Order-Details.php?wbno=' . urlencode($clean_tracking_no);
+							@endphp
 							<tr>
 								<td>TRACKING NO:</td>
-								<td style="font-weight: 700; color: #1e293b;">{{ !empty($receipt_details->tracking_number) ? $receipt_details->tracking_number : $receipt_details->shipping_custom_field_1_value }}</td>
+								<td style="font-weight: 700; color: #1e293b;">{{ $raw_tracking_no }}</td>
+							</tr>
+							<tr>
+								<td style="vertical-align: middle; padding-top: 6px;">TRACK ORDER:</td>
+								<td style="vertical-align: middle; padding-top: 6px;">
+									<a href="{{ $tracking_url }}" target="_blank" rel="noopener noreferrer" class="inv-track-link">
+										Click to Track &rarr;
+									</a>
+								</td>
 							</tr>
 						@endif
 

@@ -126,7 +126,12 @@
 
       
       @if(!empty($sell->shipping_custom_field_1))
-        <br><strong>{{!empty($custom_labels['shipping']['custom_field_1']) ? $custom_labels['shipping']['custom_field_1'] : __('sale.tracking_number')}}: </strong> {{$sell->shipping_custom_field_1}}
+        @php
+          $clean_tracking_no = ltrim(trim($sell->shipping_custom_field_1), '#');
+          $tracking_url = 'https://domex.lk/Order-Details.php?wbno=' . urlencode($clean_tracking_no);
+        @endphp
+        <br><strong>{{!empty($custom_labels['shipping']['custom_field_1']) ? $custom_labels['shipping']['custom_field_1'] : __('sale.tracking_number')}}: </strong>
+        <a href="{{ $tracking_url }}" target="_blank" rel="noopener noreferrer">{{$sell->shipping_custom_field_1}} <i class="fas fa-external-link-alt fa-xs"></i></a>
       @endif
       @if(!empty($sell->shipping_custom_field_2))
         <br><strong>{{$custom_labels['shipping']['custom_field_2'] ?? ''}}: </strong> {{$sell->shipping_custom_field_2}}
